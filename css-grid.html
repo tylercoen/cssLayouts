@@ -50,6 +50,8 @@
         /* gap: 30px; */
         column-gap: 30px;
         row-gap: 60px;
+        /* temporary */
+        display: none;
       }
       .el--8 {
         grid-column: 2 / 3;
@@ -64,7 +66,6 @@
       }
 
       .container--2 {
-        display: none;
         /* STARTER */
         font-family: sans-serif;
         background-color: black;
@@ -75,6 +76,22 @@
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+        gap: 50px;
+        /* aligning tracks inside container: distributing empty space */
+        justify-content: center;
+        /* justify-content: space-between; */
+        align-content: center;
+
+        /* aligning the items inside cells: moving items around inside cells align =  vertical justify = horizontal default is stretch*/
+        align-items: center;
+        justify-items: center;
+      }
+      .el--3 {
+        align-self: end;
+        justify-self: end;
       }
     </style>
   </head>
